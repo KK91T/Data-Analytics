@@ -1,0 +1,86 @@
+[
+  {
+    "op": "core/column-split",
+    "description": "Split On ',' [Client Name] (#### Rows)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Client Name",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 2,
+    "separatorSolutionInt": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Find And Replace Characters In Cell From 'and' To ',' [Client Name 2] (#### Rows)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Client Name 2",
+    "expression": "grel:replace (value, 'and', ',')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split On ',' [Client Name 2] (#### Rows)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Client Name 2",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 2,
+    "separatorSolutionInt": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Trim Leading And Trailing Whitespace [Client Name 1] (#### Rows)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Client Name 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Trim Leading And Trailing Whitespace [Client Name 2 1] (#### Rows)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Client Name 2 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Trim Leading And Trailing Whitespace [Client Name 2 2] (#### Rows)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Client Name 2 2",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
