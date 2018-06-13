@@ -1,7 +1,11 @@
 [
-  {
+  
+
+{
     "op": "core/column-split",
-    "description": "Split On ',' [Client Name] (#### Rows)",
+    "description": "Split On ',' 
+
+[Client Name] (#### Rows)",
     "engineConfig": {
       "mode": "row-based",
       "facets": []
@@ -17,7 +21,9 @@
   },
   {
     "op": "core/text-transform",
-    "description": "Find And Replace Characters In Cell From 'and' To ',' [Client Name 2] (#### Rows)",
+    "description": "Find And Replace Characters In Cell From 'and' To ',' 
+
+[Client Name 2] (#### Rows)",
     "engineConfig": {
       "mode": "row-based",
       "facets": []
@@ -30,7 +36,10 @@
   },
   {
     "op": "core/column-split",
-    "description": "Split On ',' [Client Name 2] (#### Rows)",
+    "description": "Split On ',' 
+
+
+[Client Name 2] (#### Rows)",
     "engineConfig": {
       "mode": "row-based",
       "facets": []
@@ -44,9 +53,13 @@
     "maxColumns": 2,
     "separatorSolutionInt": 0
   },
-  {
+  
+{
     "op": "core/text-transform",
-    "description": "Trim Leading And Trailing Whitespace [Client Name 1] (#### Rows)",
+    "description": "Trim Leading And Trailing Whitespace 
+
+
+[Client Name 1] (#### Rows)",
     "engineConfig": {
       "mode": "row-based",
       "facets": []
@@ -59,7 +72,8 @@
   },
   {
     "op": "core/text-transform",
-    "description": "Trim Leading And Trailing Whitespace [Client Name 2 1] (#### Rows)",
+    "description": "Trim Leading And Trailing Whitespace 
+[Client Name 2 1] (#### Rows)",
     "engineConfig": {
       "mode": "row-based",
       "facets": []
@@ -72,7 +86,9 @@
   },
   {
     "op": "core/text-transform",
-    "description": "Trim Leading And Trailing Whitespace [Client Name 2 2] (#### Rows)",
+    "description": "Trim Leading And Trailing Whitespace 
+
+[Client Name 2 2] (#### Rows)",
     "engineConfig": {
       "mode": "row-based",
       "facets": []
